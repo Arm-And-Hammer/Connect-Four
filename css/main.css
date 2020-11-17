@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+td {
+    height: 10vmin;
+    width: 10vmin;
+    border-radius: 50%;
+    border: 1px solid grey;
+}
+
+table {
+    border-spacing: 2vmin;
+}
+
+th > div {
+    height: 5vmin;
+    width: 5vmin;
+    border-top: 5vmin solid blue;
+    border-left: 5vmin solid transparent;
+    border-right: 5vmin solid transparent;
+    transform: scale(0.7);
+}
+
+th > div:hover {
+    transform: scale(1);
+    transition: all .2s ease-in-out;
+}
