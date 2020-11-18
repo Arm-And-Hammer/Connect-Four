@@ -57,9 +57,35 @@ function handleMove(evt) {
   if (rowIdx === -1) return;
   board[colIdx][rowIdx] = turn;
   turn *= -1;
-
+  updateWinner(colIdx, rowIdx);
   render();
 }
+
+function updateWinner(colIdx, rowIdx) {
+  // colIdx and rowIdx represent the recent cell clicked
+  winner = checkVerticalWin(colIdx, rowIdx);
+  if (winner) return;
+  winner = checkHorizontalWin(colIdx, rowIdx);
+  if (winner) return;
+  
+
+}
+
+function checkVerticalWin(colIdx, rowIdx) {
+  //
+  const colArr = board[colIdx];
+  const sum = colArr[rowIdx] + colArr[rowIdx - 1] + colArr[rowIdx - 2] + colArr[rowIdx - 3];
+  if (sum === 4 || sum === -4) {
+    return colArr[rowIdx];
+  } else {
+    return null;
+  }
+}
+
+function checkHorizontalWin(colIdx, rowIdx) {
+
+}
+
 // This function is reponsible for putting the changes to our 'board' array
 // onto the users screen AKA render it on the screen!
 // ** HERE IS WHERE WE WANT TO CHANGE THE DOM **
@@ -76,9 +102,10 @@ function render() {
     div.style.display = colArr.includes(0) ? 'block' : 'none';
   });
   if (winner === 'T') {
-
+    msgEl.textContent = "It's a Tie";
   } else if (winner) {
-
+    const player = playerColors[winner].toUpperCase();
+    msgEl.textContent = `${player} Wins!`;
   } else {
     const player = playerColors[turn].toUpperCase();
     msgEl.textContent = `${player}'s Turn`;
