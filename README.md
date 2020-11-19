@@ -2,7 +2,7 @@
 Connect Four game
 connect four circles and win the game!
 
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/qyKhtgS" data-context="false" ><a href="//imgur.com/a/qyKhtgS">Connect Four board</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+<img src="https://imgur.com/a/f7kkYtc">
 <blockquote class="imgur-embed-pub" lang="en" data-id="a/f7kkYtc"  ><a href="//imgur.com/a/f7kkYtc">Connect Four Board With circles filled</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
 
