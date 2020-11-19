@@ -13,11 +13,10 @@ Connect four circles and win the game!
 
 # Getting Started:
 
-[Play Connect Four](https://arm-and-hammer.github.io/connect-four/)
+[Play Connect Four](https://arm-and-hammer.github.io/Connect-Four/)
 
 # Next steps:
 
-- having a diagonal win logic.
-- refining the board.
-- refine the text.
-- add a try again button.
+- Implament diagonal win logic.
+- Refine styling.
+
