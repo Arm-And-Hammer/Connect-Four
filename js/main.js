@@ -83,7 +83,15 @@ function checkVerticalWin(colIdx, rowIdx) {
 }
 
 function checkHorizontalWin(colIdx, rowIdx) {
-
+  const player = board[colIdx][rowIdx];
+  while (i >= 0 || i <= 6) {
+    const sum = player
+  } 
+  if (sum === 4 || sum === -4) {
+    return player[ ];
+  } else {
+    return null;
+  }
 }
 
 // This function is reponsible for putting the changes to our 'board' array
