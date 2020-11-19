@@ -2,8 +2,8 @@
 Connect Four game
 connect four circles and win the game!
 
-<img src="https://imgur.com/cEg1Cf7">
-<img src="https://imgur.com/v7e34kG">
+<img src="https://i.imgur.com/cEg1Cf7.png">
+<img src="https://i.imgur.com/v7e34kG.png">
 
 Technologies Used: JavaScript, HTML, and CSS
 
