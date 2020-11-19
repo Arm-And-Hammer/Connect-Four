@@ -11,7 +11,9 @@ Game: https://arm-and-hammer.github.io/connect-four/
 
 
 Next steps:
-having a diagonal win logic.
-refining the board.
-refine the text.
-add a try again button.
+<ul>
+  <li>having a diagonal win logic.</li>
+  <li>refining the board.</li>
+  <li>refine the text.</li>
+  <li>add a try again button.</li>
+</ul>
