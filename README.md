@@ -2,8 +2,8 @@
 Connect Four game
 connect four circles and win the game!
 
-<img src="https://imgur.com/gallery/xDjpMl2">
-<img src="<blockquote class="imgur-embed-pub" lang="en" data-id="a/f7kkYtc"  ><a href="//imgur.com/a/f7kkYtc">Connect Four Board With circles filled</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>">
+<img src="https://imgur.com/cEg1Cf7">
+<img src="https://imgur.com/v7e34kG">
 
 Technologies Used: JavaScript, HTML, and CSS
 
