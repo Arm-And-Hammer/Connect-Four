@@ -20,9 +20,11 @@ let winner;
 /*----- cached element references -----*/
 const colMarkers = document.querySelectorAll('th > div');
 const msgEl = document.getElementById('msg');
+const replayBtn = document.getElementById('replay');
 
 /*----- event listeners -----*/
 document.querySelector('thead').addEventListener('click', handleMove);
+replayBtn.addEventListener('click', init);
 
 /*----- functions -----*/
 // This function should set the initial values for the game
@@ -83,19 +85,18 @@ function checkVerticalWin(colIdx, rowIdx) {
 }
 
 function checkHorizontalWin(colIdx, rowIdx) {
+  colIdx = parseInt(colIdx);
   const player = board[colIdx][rowIdx];
-
-  while (colIdx >= 0 && colIdx <= 6) {
-    const sum = player[colIdx] + player[colIdx + 1] + player[colIdx + 2] + player[colIdx + 3];
-    if (sum === 4 || sum === -4) {
-      return player[colIdx][rowIdx];
-    } else {
-      return null;
-    }
+  //Find left most colIdx with same player value
+  while (colIdx - 1 >= 0 && board[colIdx - 1][rowIdx] === player ) colIdx--;
+  const sum = board[colIdx][rowIdx] + board[colIdx + 1][rowIdx] + board[colIdx + 2][rowIdx] + board[colIdx + 3][rowIdx];
+  if (sum === 4 || sum === -4) {
+    return player;
+  } else {
+    return null;
   }
-
-  
 }
+
 
 // This function is reponsible for putting the changes to our 'board' array
 // onto the users screen AKA render it on the screen!
@@ -121,6 +122,8 @@ function render() {
     const player = playerColors[turn].toUpperCase();
     msgEl.textContent = `${player}'s Turn`;
   }
+
+  replayBtn.style.visibility = winner ? 'visible' : 'hidden';
 
 }
 // Call init() to start the game fresh when the page first loads
