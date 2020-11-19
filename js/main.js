@@ -16,7 +16,6 @@ let board;
 let turn;
 let winner;
 
-
 /*----- cached element references -----*/
 const colMarkers = document.querySelectorAll('th > div');
 const msgEl = document.getElementById('msg');
@@ -69,12 +68,9 @@ function updateWinner(colIdx, rowIdx) {
   if (winner) return;
   winner = checkHorizontalWin(colIdx, rowIdx);
   if (winner) return;
-  
-
 }
 
 function checkVerticalWin(colIdx, rowIdx) {
-  //
   const colArr = board[colIdx];
   const sum = colArr[rowIdx] + colArr[rowIdx - 1] + colArr[rowIdx - 2] + colArr[rowIdx - 3];
   if (sum === 4 || sum === -4) {
@@ -96,7 +92,6 @@ function checkHorizontalWin(colIdx, rowIdx) {
     return null;
   }
 }
-
 
 // This function is reponsible for putting the changes to our 'board' array
 // onto the users screen AKA render it on the screen!
@@ -122,10 +117,7 @@ function render() {
     const player = playerColors[turn].toUpperCase();
     msgEl.textContent = `${player}'s Turn`;
   }
-
   replayBtn.style.visibility = winner ? 'visible' : 'hidden';
-
 }
 // Call init() to start the game fresh when the page first loads
 init();
-
